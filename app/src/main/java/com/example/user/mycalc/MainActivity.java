@@ -46,7 +46,39 @@ public class MainActivity extends Activity {
         btn1.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                tvResult.setText(Integer.parseInt(etVal1.getText().toString()) + Integer.parseInt(etVal2.getText().toString()));
+                 tvResult.setText( (Integer.parseInt(etVal1.getText().toString()) + Integer.parseInt(etVal2.getText().toString()))+"" );
+                return false;
+            }
+        });
+
+        btn2.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                tvResult.setText( (Integer.parseInt(etVal1.getText().toString()) - Integer.parseInt(etVal2.getText().toString()))+"" );
+                return false;
+            }
+        });
+
+        btn3.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                tvResult.setText( (Integer.parseInt(etVal1.getText().toString()) * Integer.parseInt(etVal2.getText().toString()))+"" );
+                return false;
+            }
+        });
+
+        btn4.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                tvResult.setText( (Integer.parseInt(etVal1.getText().toString()) / Integer.parseInt(etVal2.getText().toString()))+"" );
+                return false;
+            }
+        });
+
+        btn5.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                tvResult.setText( (Integer.parseInt(etVal1.getText().toString()) % Integer.parseInt(etVal2.getText().toString()))+"" );
                 return false;
             }
         });
